@@ -1,5 +1,6 @@
 import React from 'react';
-import { Globe, ChevronDown, Network } from 'lucide-react';
+import { Globe, ChevronDown, Network, Phone, MessageCircle, Mail, MessageSquare } from 'lucide-react';
+import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
 import './App.css';
 
 const Navbar = () => (
@@ -78,8 +79,120 @@ function App() {
           <TriangleGraphic2 />
         </div>
       </div>
+      
+      <Footer />
+      <ChatWidget />
     </div>
   );
 }
+
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-top">
+      <div className="footer-col brand-col">
+        <img src="https://kfintech.com/new-assets/images/logo/kfintech-white-tagline.svg" alt="KFintech Logo" className="footer-logo" />
+        <p className="footer-desc">
+          KFintech serves the mission-critical needs of asset managers with clients spanning mutual funds, AIFs (alternative investments), pension, wealth managers and corporates in India and abroad. The company provides SaaS based end-to-end transaction management, channel management, compliance solutions, data analytics and various other digital services to asset managers across segments, as well as outsourcing services for global players.
+        </p>
+      </div>
+
+      <div className="footer-col">
+        <h4 className="footer-heading">ABOUT US</h4>
+        <ul className="footer-links">
+          <li>About KFintech</li>
+          <li>Careers</li>
+          <li>Contact Us</li>
+        </ul>
+        <h4 className="footer-heading">MUTUAL FUND SOLUTIONS</h4>
+        <ul className="footer-links">
+          <li>Distributor Solutions</li>
+          <li>Channel Partner Solutions</li>
+          <li>Mutual Fund Investor Solutions</li>
+          <li>Korp Connect</li>
+          <li>RIA Solutions</li>
+          <li>AMC Solutions</li>
+          <li>Financial Solutions</li>
+        </ul>
+      </div>
+
+      <div className="footer-col">
+        <h4 className="footer-heading">CORPORATE REGISTRY</h4>
+        <ul className="footer-links">
+          <li>Karisma</li>
+          <li>Evoting</li>
+          <li>Fintrak</li>
+          <li>Kprism</li>
+          <li>Kreation</li>
+        </ul>
+        <h4 className="footer-heading">NATIONAL PENSION SYSTEM</h4>
+        <ul className="footer-links">
+          <li>NPS</li>
+          <li>CRA Login</li>
+        </ul>
+        <h4 className="footer-heading">GLOBAL BUSINESS SOLUTIONS</h4>
+        <ul className="footer-links">
+          <li>Mortgage Solutions</li>
+          <li>Investors Solutions</li>
+          <li>Legal Solutions</li>
+          <li>Finance & Accounting Solutions</li>
+        </ul>
+      </div>
+
+      <div className="footer-col">
+        <h4 className="footer-heading">OTHER SOLUTIONS</h4>
+        <ul className="footer-links">
+          <li>GFS</li>
+          <li>PWM</li>
+          <li>PMS</li>
+          <li>AIF</li>
+        </ul>
+        <h4 className="footer-heading">LEGAL & PRIVACY</h4>
+        <ul className="footer-links">
+          <li>Terms of Use</li>
+          <li>Privacy Policy</li>
+          <li>QRTA SEBI Guidelines</li>
+          <li>Disclosures</li>
+        </ul>
+        <h4 className="footer-heading">GET IN TOUCH</h4>
+        <ul className="footer-contact">
+          <li><Phone size={14} /> +91-40-67162222/+91-40-7961 1000</li>
+          <li><MessageCircle size={14} /> 91000 94099</li>
+          <li><Mail size={14} /> einward.ris@kfintech.com</li>
+          <li><Mail size={14} /> investorsupport.mfs@kfintech.com</li>
+          <li><Mail size={14} /> kfinkart.support@kfintech.com</li>
+          <li><Mail size={14} /> kfinkart.distsupport@kfintech.com</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div className="footer-bottom">
+      <div className="footer-copyright">
+        © Copyright KFintech 2026 | All Rights Reserved.
+      </div>
+      <div className="footer-social">
+        <span className="social-text">CONNECT WITH US</span>
+        <div className="social-icons">
+          <span className="icon-box"><FaXTwitter size={14} /></span>
+          <span className="icon-box"><FaInstagram size={14} /></span>
+          <span className="icon-box"><FaFacebookF size={14} /></span>
+          <span className="icon-box"><FaLinkedinIn size={14} /></span>
+          <span className="icon-box"><FaYoutube size={14} /></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+const ChatWidget = () => (
+  <div className="chat-widget">
+    <div className="chat-bubble">
+      <span className="chat-title">We're Online!</span>
+      <span className="chat-text">How may I help you today?</span>
+    </div>
+    <div className="chat-icon">
+      <MessageSquare size={24} color="#fff" />
+    </div>
+  </div>
+);
 
 export default App;
